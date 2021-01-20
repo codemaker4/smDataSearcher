@@ -1,0 +1,11 @@
+{
+    "paths" : {
+        "main" : "/home/codemaker4/.steam/steam/steamapps/common/Scrap Mechanic",
+        "shapeSets" : "/Data/Objects/Database/shapesets.json",
+        "gameData" : "/Data",
+        "survivalData" : "/Survival",
+        "translationData" : ["/Data/Gui/Language/English/InventoryItemDescriptions.json","/Survival/Gui/Language/English/inventoryDescriptions.json"],
+        "craftingFolder" : "/Survival/CraftingRecipes/",
+        "craftingTypes" : ["cookbot", "craftbot", "dispenser", "dressbot", "hideout", "workbench"]
+    }
+}
