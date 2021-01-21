@@ -83,7 +83,7 @@ def getCraftingRecipes():
 def searchMakeRecipes(uuid):
     foundRecipes = []
     for craftingRecipe in craftingRecipes:
-        if craftingRecipe["itemId"] == uuid:
+        if uuid == "*" or craftingRecipe["itemId"] == uuid:
             foundRecipes.append(craftingRecipe)
     return foundRecipes
 
@@ -140,6 +140,11 @@ def cmd_getMake():
     print(json.dumps(foundRecipes, indent=4, sort_keys=False))
     print("note: the botType property was added by the program. This property stores the name of the bot/thing that the crafting recipe belongs to (the filename but without the .json part)")
     print("note: the itemNameAndTitle properties were added by the program. This property stores the title and description of the uuids of crafted items and ingredients (only if found in translation data.)")
+    if len(foundRecipes) > 10:
+        f = open("result.json", "w")
+        f.write(json.dumps(foundRecipes, indent=4, sort_keys=False))
+        f.close()
+        print("The results have also been put in 'result.json' because there were a lot of results")
 
 def cmd_getUse():
     uuid = input("give a uuid: ")

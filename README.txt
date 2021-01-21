@@ -19,6 +19,7 @@ You can also type '*' as a search term and it will act like every result was a m
    #   The info command   #
 Type "info"
 Now you can either paste a uuid or type the name of an item, just like in search. The program will find blocks and parts, and print all data about the part, plus some extra properties the program adds as a JSON formatted list.
+You can also type * as a search que, in wich case it will give info of every item and export it to result.json. Handy for exporting nicely formatted SM data.
 
    #   The reload command   #
 Type "reload" to reload all files. Handy if you modified something in the config or game files and don't want to need to restart the program.
@@ -26,3 +27,4 @@ Type "reload" to reload all files. Handy if you modified something in the config
    #   The getMake and getUse commands   #
 getMake gets all the recipes that make a certain item, and getUse gets all the recipes that use a given item.
 The item is always specified with a uuid for these commands, so title searching does NOT work here.
+Though the getMake command does have * search implemented, so just like with the info command, you can simply time * instead of an uuid to export all craftingrecipes into a single JSON file named result.json.
